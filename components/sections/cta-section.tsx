@@ -9,7 +9,7 @@ interface CTASectionProps {
   onClick?: () => void;
 }
 
-const CTASection = ({ title, buttonText, onClick }: CTASectionProps) => {
+export const CTASection = ({ title, buttonText, onClick }: CTASectionProps) => {
   return (
     <Section className="bg-black text-white">
       <Container className="text-center">

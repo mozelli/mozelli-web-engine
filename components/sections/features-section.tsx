@@ -9,12 +9,12 @@ interface Feature {
   description: string;
 }
 
-interface FeatureSectionProps {
+interface FeaturesSectionProps {
   title: string;
   items: Feature[];
 }
 
-export const FeatureSection = ({ title, items }: FeatureSectionProps) => {
+export const FeaturesSection = ({ title, items }: FeaturesSectionProps) => {
   return (
     <Section>
       <Container>

@@ -5,8 +5,8 @@ import { Text } from "../ui/text";
 import { Card } from "../ui/card";
 
 interface Testimonials {
-  title: string;
-  description: string;
+  name: string;
+  content: string;
 }
 
 interface TestimonialsSectionProps {
@@ -26,9 +26,9 @@ export const TestimonialsSection = ({
           {items.map((item, index) => (
             <Card key={index}>
               <Heading as="h4" className="mb-4">
-                {item.title}
+                {item.name}
               </Heading>
-              <Text>{item.description}</Text>
+              <Text>{item.content}</Text>
             </Card>
           ))}
         </div>
