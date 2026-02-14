@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
 import { siteConfig } from "@/config/site";
 import { SiteLayout } from "@/components/layouts/site-layout";
 
-const geistSans = Geist({
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+});
+
+/*const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
@@ -13,7 +18,7 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-});
+});*/
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -46,7 +51,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt_BR">
-      <body>
+      <body className={inter.className}>
         <SiteLayout>{children}</SiteLayout>
       </body>
     </html>
