@@ -5,6 +5,8 @@ export const metadata = generateSEO({
   description: "Página com a lista de artigos do Blog Mozelli Marketing",
 });
 
-export const BlogPage = () => {
+const BlogPage = () => {
   return <div className="">Lista de artigos</div>;
 };
+
+export default BlogPage;
