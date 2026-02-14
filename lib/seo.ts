@@ -6,12 +6,14 @@ interface SEOProps {
   description?: string;
 }
 
-export const generateSEO = ({ title, description }: SEOProps) => {
+export const generateSEO = ({ title, description }: SEOProps): Metadata => {
   return {
     title,
     description,
-    url: siteConfig.url,
-    siteName: siteConfig.name,
-    type: "website",
+    openGraph: {
+      url: siteConfig.url,
+      siteName: siteConfig.name,
+      type: "website",
+    },
   };
 };
