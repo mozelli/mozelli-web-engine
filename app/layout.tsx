@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import { siteConfig } from "@/config/site";
+import { SiteLayout } from "@/components/layouts/site-layout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,7 +46,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt_BR">
-      <body>{children}</body>
+      <body>
+        <SiteLayout>{children}</SiteLayout>
+      </body>
     </html>
   );
 }
