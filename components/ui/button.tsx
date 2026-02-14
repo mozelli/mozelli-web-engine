@@ -5,7 +5,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   size?: "sm" | "md" | "lg";
 }
 
-const Button = ({ variant, size, className, ...props }: ButtonProps) => {
+export const Button = ({ variant, size, className, ...props }: ButtonProps) => {
   const base =
     "inline-flex items-center justify-center rounded-md font-medium transition-colors focus:outline-none";
 
